@@ -4,7 +4,7 @@ import { makeStyles, withStyles } from '@material-ui/core';
 //we going to use withStyles and makeStyles in material ui
 // so I can convert the jss into the CSS.
 
-const useStyles = makeStyles({
+const style = {
     sideMenuStyles: {
         display: 'flex',
         flexDirection: 'column',
@@ -14,18 +14,20 @@ const useStyles = makeStyles({
         height: '100%',
         backgroundColor: 'slategray'
     }
-})
+}
 
-function SideMenu() {
+const SideMenu = (props) => {
 
-    const mainClassStyle = useStyles();
-    console.log(mainClassStyle);
+    const { classes } = props;
 
+    //we return the class side menu 
+    //we define the CSS using JSS 
+    //to be able to be to use css using material ui
     return (
-        <div className={mainClassStyle.sideMenuStyles}>
+        <div className={classes.sideMenuStyles}>
 
         </div>
     )
 }
 
-export default SideMenu;
+export default withStyles(style)(SideMenu);
