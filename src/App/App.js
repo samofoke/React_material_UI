@@ -4,7 +4,6 @@ import HeaderMenu from '../components/Header/header';
 import EnhancedTable from '../components/sample/Table';
 import { makeStyles } from '@material-ui/core';
 import './App.css';
-import CustomButtons from '../components/sample/custom_buttons/CustomButtons';
 
 const useStyles = makeStyles({
   appMain: {
@@ -23,7 +22,6 @@ function App() {
     <div className={classes.appMain}>
     <HeaderMenu />
     <EnhancedTable />
-    <CustomButtons/>
     </div>
     </>
   );

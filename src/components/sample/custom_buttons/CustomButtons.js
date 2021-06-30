@@ -4,8 +4,13 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        margin: '10px',
+        width: '40%'
+    },
     button: {
         margin: theme.spacing(1),
+        borderRadius: '20px',
     },
 }));
 
@@ -13,10 +18,10 @@ function CustomButtons() {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.root}>
             <Button
                 variant="contained"
-                color="secondary"
+                color="default"
                 className={classes.button}
                 startIcon={<AiOutlineFileAdd/>}
 
@@ -25,7 +30,7 @@ function CustomButtons() {
             </Button>
             <Button
                 variant="contained"
-                color="secondary"
+                color="default"
                 className={classes.button}
                 startIcon={<AiOutlineFileAdd/>}
 
