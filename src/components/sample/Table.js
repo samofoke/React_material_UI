@@ -22,6 +22,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 //import FilterListIcon from '@material-ui/icons/FilterList';
 import DefineFieldInput from './input_field/inputComponent';
 import CustomButtons from './custom_buttons/CustomButtons';
+import ClearIcon from '@material-ui/icons/Clear';
+import { Radio } from '@material-ui/core';
 //import { BorderStyleRounded } from '@material-ui/icons';
 
 function createData(name, calories, fat, carbs, protein) {
@@ -174,10 +176,7 @@ const EnhancedTableToolbar = (props) => {
          <CustomButtons/>
         </Tooltip>
       ) : (
-        <Tooltip title="Filter list">
-          <IconButton aria-label="filter list">
-          </IconButton>
-        </Tooltip>
+        <Typography></Typography>
       )}
     </Toolbar>
   );
@@ -321,8 +320,15 @@ export default function EnhancedTable() {
                       </TableCell>
                       <TableCell align="right">{row.calories}</TableCell>
                       <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      <TableCell align="right">{row.protein}</TableCell>
+                      <TableCell align="right">
+                        <ClearIcon/>
+                      </TableCell>
+                      <TableCell align="right">
+                        <Radio
+                          checked={isItemSelected}
+                          inputProps={{ 'aria-labelledby': labelId }}
+                        />
+                      </TableCell>
                     </TableRow>
                   );
                 })}
