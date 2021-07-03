@@ -9,8 +9,13 @@ const useStyles = makeStyles((theme) => ({
         width: '40%'
     },
     button: {
+        color: '#FFFFFF',
         margin: theme.spacing(1),
         borderRadius: '20px',
+        '&:hover': {
+            backgroundColor: '#008B8B',
+            color: '#FFFFFF'
+        }
     },
 }));
 

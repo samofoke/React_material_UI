@@ -30,4 +30,6 @@ const SideMenu = (props) => {
     )
 }
 
+//tis is called higher order functions.
+
 export default withStyles(style)(SideMenu);
